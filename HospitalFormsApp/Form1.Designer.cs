@@ -157,11 +157,11 @@
             // stayChargeBox
             // 
             this.stayChargeBox.Location = new System.Drawing.Point(164, 162);
-            this.stayChargeBox.Mask = "0000000000";
             this.stayChargeBox.Name = "stayChargeBox";
             this.stayChargeBox.ReadOnly = true;
             this.stayChargeBox.Size = new System.Drawing.Size(100, 20);
             this.stayChargeBox.TabIndex = 11;
+            this.stayChargeBox.Text = "0";
             // 
             // stayChargeLabel
             // 
@@ -175,11 +175,11 @@
             // miscChargeBox
             // 
             this.miscChargeBox.Location = new System.Drawing.Point(164, 188);
-            this.miscChargeBox.Mask = "0000000000";
             this.miscChargeBox.Name = "miscChargeBox";
             this.miscChargeBox.ReadOnly = true;
             this.miscChargeBox.Size = new System.Drawing.Size(100, 20);
             this.miscChargeBox.TabIndex = 13;
+            this.miscChargeBox.Text = "0";
             // 
             // miscChargeLabel
             // 
@@ -203,20 +203,20 @@
             // totalChargeBox
             // 
             this.totalChargeBox.Location = new System.Drawing.Point(164, 227);
-            this.totalChargeBox.Mask = "0000000000";
             this.totalChargeBox.Name = "totalChargeBox";
             this.totalChargeBox.ReadOnly = true;
             this.totalChargeBox.Size = new System.Drawing.Size(100, 20);
             this.totalChargeBox.TabIndex = 16;
+            this.totalChargeBox.Text = "0";
             // 
             // totalChargeLabel
             // 
             this.totalChargeLabel.AutoSize = true;
             this.totalChargeLabel.Location = new System.Drawing.Point(43, 230);
             this.totalChargeLabel.Name = "totalChargeLabel";
-            this.totalChargeLabel.Size = new System.Drawing.Size(118, 13);
+            this.totalChargeLabel.Size = new System.Drawing.Size(75, 13);
             this.totalChargeLabel.TabIndex = 17;
-            this.totalChargeLabel.Text = "Miscellaneous charges:";
+            this.totalChargeLabel.Text = "Total charges:";
             // 
             // calcButton
             // 

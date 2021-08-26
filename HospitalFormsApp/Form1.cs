@@ -21,18 +21,23 @@ namespace HospitalFormsApp
 
         private void resetTotals(object sender, EventArgs e)
         {
-            stayChargeBox.Text = "";
-            miscChargeBox.Text = "";
-            totalChargeBox.Text = "";
+            stayChargeBox.Text = "???";
+            miscChargeBox.Text = "???";
+            totalChargeBox.Text = "???";
         }
 
         private void calculateTotals(object sender, EventArgs e)
         {
-            charges.Days = Int32.Parse(daysBox.Text);
-            charges.RxFee = Int32.Parse(rxBox.Text);
-            charges.SurgFee = Int32.Parse(surgBox.Text);
-            charges.LabFee = Int32.Parse(labBox.Text);
-            charges.RehabFee = Int32.Parse(rehabBox.Text);
+            try { charges.Days = Int32.Parse(daysBox.Text); }
+                catch { charges.Days = 0; }
+            try { charges.RxFee = Int32.Parse(rxBox.Text); }
+                catch { charges.RxFee = 0; }
+            try { charges.SurgFee = Int32.Parse(surgBox.Text); }
+                catch { charges.SurgFee = 0; }
+            try { charges.LabFee = Int32.Parse(labBox.Text); }
+                catch { charges.LabFee = 0; }
+            try { charges.RehabFee = Int32.Parse(rehabBox.Text); }
+                catch { charges.RehabFee = 0; }
 
             stayChargeBox.Text = $"{charges.CalcStayCharges()}";
             miscChargeBox.Text = $"{charges.CalcMiscCharges()}";
