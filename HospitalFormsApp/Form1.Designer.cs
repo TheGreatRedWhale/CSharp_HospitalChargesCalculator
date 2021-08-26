@@ -31,7 +31,7 @@
             this.daysBox = new System.Windows.Forms.MaskedTextBox();
             this.rxBox = new System.Windows.Forms.MaskedTextBox();
             this.surgBox = new System.Windows.Forms.MaskedTextBox();
-            this.rehabFee = new System.Windows.Forms.MaskedTextBox();
+            this.rehabBox = new System.Windows.Forms.MaskedTextBox();
             this.labBox = new System.Windows.Forms.MaskedTextBox();
             this.daysLabel = new System.Windows.Forms.Label();
             this.rxLabel = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             this.daysBox.Size = new System.Drawing.Size(100, 20);
             this.daysBox.TabIndex = 0;
             this.daysBox.Text = "0";
-            this.daysBox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            this.daysBox.TextChanged += new System.EventHandler(this.resetTotals);
             // 
             // rxBox
             // 
@@ -67,6 +67,7 @@
             this.rxBox.Size = new System.Drawing.Size(100, 20);
             this.rxBox.TabIndex = 1;
             this.rxBox.Text = "0";
+            this.rxBox.TextChanged += new System.EventHandler(this.resetTotals);
             // 
             // surgBox
             // 
@@ -76,15 +77,17 @@
             this.surgBox.Size = new System.Drawing.Size(100, 20);
             this.surgBox.TabIndex = 2;
             this.surgBox.Text = "0";
+            this.surgBox.TextChanged += new System.EventHandler(this.resetTotals);
             // 
-            // rehabFee
+            // rehabBox
             // 
-            this.rehabFee.Location = new System.Drawing.Point(164, 123);
-            this.rehabFee.Mask = "0000000000";
-            this.rehabFee.Name = "rehabFee";
-            this.rehabFee.Size = new System.Drawing.Size(100, 20);
-            this.rehabFee.TabIndex = 3;
-            this.rehabFee.Text = "0";
+            this.rehabBox.Location = new System.Drawing.Point(164, 123);
+            this.rehabBox.Mask = "0000000000";
+            this.rehabBox.Name = "rehabBox";
+            this.rehabBox.Size = new System.Drawing.Size(100, 20);
+            this.rehabBox.TabIndex = 3;
+            this.rehabBox.Text = "0";
+            this.rehabBox.TextChanged += new System.EventHandler(this.resetTotals);
             // 
             // labBox
             // 
@@ -94,6 +97,7 @@
             this.labBox.Size = new System.Drawing.Size(100, 20);
             this.labBox.TabIndex = 4;
             this.labBox.Text = "0";
+            this.labBox.TextChanged += new System.EventHandler(this.resetTotals);
             // 
             // daysLabel
             // 
@@ -222,6 +226,7 @@
             this.calcButton.TabIndex = 18;
             this.calcButton.Text = "Calculate";
             this.calcButton.UseVisualStyleBackColor = true;
+            this.calcButton.Click += new System.EventHandler(this.calculateTotals);
             // 
             // hospForm
             // 
@@ -243,7 +248,7 @@
             this.Controls.Add(this.rxLabel);
             this.Controls.Add(this.daysLabel);
             this.Controls.Add(this.labBox);
-            this.Controls.Add(this.rehabFee);
+            this.Controls.Add(this.rehabBox);
             this.Controls.Add(this.surgBox);
             this.Controls.Add(this.rxBox);
             this.Controls.Add(this.daysBox);
@@ -259,7 +264,7 @@
         private System.Windows.Forms.MaskedTextBox daysBox;
         private System.Windows.Forms.MaskedTextBox rxBox;
         private System.Windows.Forms.MaskedTextBox surgBox;
-        private System.Windows.Forms.MaskedTextBox rehabFee;
+        private System.Windows.Forms.MaskedTextBox rehabBox;
         private System.Windows.Forms.MaskedTextBox labBox;
         private System.Windows.Forms.Label daysLabel;
         private System.Windows.Forms.Label rxLabel;
