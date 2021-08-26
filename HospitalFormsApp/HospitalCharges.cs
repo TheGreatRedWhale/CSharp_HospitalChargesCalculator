@@ -19,5 +19,10 @@ namespace HospitalFormsApp
             return this.Days * 350;
         }
 
+        public int CalcMiscCharges()
+        {
+            return (RxFee + SurgFee + LabFee + RehabFee);
+        }
+
     }
 }
