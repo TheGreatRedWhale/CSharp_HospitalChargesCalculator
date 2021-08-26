@@ -16,12 +16,17 @@ namespace HospitalFormsApp
 
         public int CalcStayCharges()
         {
-            return this.Days * 350;
+            return Days * 350;
         }
 
         public int CalcMiscCharges()
         {
             return (RxFee + SurgFee + LabFee + RehabFee);
+        }
+
+        public int CalcTotalCharges()
+        {
+            return (CalcStayCharges() + CalcMiscCharges());
         }
 
     }
