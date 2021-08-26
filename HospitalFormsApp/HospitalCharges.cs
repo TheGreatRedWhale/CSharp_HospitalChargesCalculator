@@ -8,11 +8,11 @@ namespace HospitalFormsApp
 {
     class HospitalCharges
     {
-        private int days = 0;
-        private int rxFee = 0;
-        private int surgFee = 0;
-        private int labFee = 0;
-        private int rehabFee = 0;
+        public int Days { get; set; } = 0;
+        public int RxFee { get; set; } = 0;
+        public int SurgFee { get; set; } = 0;
+        public int LabFee { get; set; } = 0;
+        public int RehabFee { get; set; } = 0;
 
     }
 }
