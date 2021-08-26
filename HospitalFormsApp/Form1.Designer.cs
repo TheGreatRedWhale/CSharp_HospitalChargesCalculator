@@ -1,6 +1,6 @@
 ﻿namespace HospitalFormsApp
 {
-    partial class Form1
+    partial class hospForm
     {
         /// <summary>
         /// Required designer variable.
@@ -56,6 +56,7 @@
             this.daysBox.Name = "daysBox";
             this.daysBox.Size = new System.Drawing.Size(100, 20);
             this.daysBox.TabIndex = 0;
+            this.daysBox.Text = "0";
             this.daysBox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // rxBox
@@ -65,6 +66,7 @@
             this.rxBox.Name = "rxBox";
             this.rxBox.Size = new System.Drawing.Size(100, 20);
             this.rxBox.TabIndex = 1;
+            this.rxBox.Text = "0";
             // 
             // surgBox
             // 
@@ -73,6 +75,7 @@
             this.surgBox.Name = "surgBox";
             this.surgBox.Size = new System.Drawing.Size(100, 20);
             this.surgBox.TabIndex = 2;
+            this.surgBox.Text = "0";
             // 
             // rehabFee
             // 
@@ -81,6 +84,7 @@
             this.rehabFee.Name = "rehabFee";
             this.rehabFee.Size = new System.Drawing.Size(100, 20);
             this.rehabFee.TabIndex = 3;
+            this.rehabFee.Text = "0";
             // 
             // labBox
             // 
@@ -89,6 +93,7 @@
             this.labBox.Name = "labBox";
             this.labBox.Size = new System.Drawing.Size(100, 20);
             this.labBox.TabIndex = 4;
+            this.labBox.Text = "0";
             // 
             // daysLabel
             // 
@@ -211,18 +216,18 @@
             // 
             // calcButton
             // 
-            this.calcButton.Location = new System.Drawing.Point(30, 253);
+            this.calcButton.Location = new System.Drawing.Point(30, 267);
             this.calcButton.Name = "calcButton";
             this.calcButton.Size = new System.Drawing.Size(234, 23);
             this.calcButton.TabIndex = 18;
             this.calcButton.Text = "Calculate";
             this.calcButton.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // hospForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(293, 302);
+            this.ClientSize = new System.Drawing.Size(293, 310);
             this.Controls.Add(this.calcButton);
             this.Controls.Add(this.totalChargeLabel);
             this.Controls.Add(this.totalChargeBox);
@@ -242,8 +247,8 @@
             this.Controls.Add(this.surgBox);
             this.Controls.Add(this.rxBox);
             this.Controls.Add(this.daysBox);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "hospForm";
+            this.Text = "Hospital Charges";
             this.ResumeLayout(false);
             this.PerformLayout();
 
