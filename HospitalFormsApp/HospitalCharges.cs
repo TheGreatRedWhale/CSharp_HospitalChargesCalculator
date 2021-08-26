@@ -9,15 +9,14 @@ namespace HospitalFormsApp
     class HospitalCharges
     {
         public int Days { get; set; } = 0;
-        public int StayFee { get; private set; } = 0;
         public int RxFee { get; set; } = 0;
         public int SurgFee { get; set; } = 0;
         public int LabFee { get; set; } = 0;
         public int RehabFee { get; set; } = 0;
 
-        public void CalcStayCharges()
+        public int CalcStayCharges()
         {
-            this.StayFee = this.Days * 350;
+            return this.Days * 350;
         }
 
     }
